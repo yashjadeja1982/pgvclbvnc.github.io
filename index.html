@@ -22,6 +22,7 @@
             flex-direction: column;
             min-height: 100vh;
             margin: 0;
+            padding: 40px 0; /* Add space at the top and bottom */
             font-family: "Aptos", "Segoe UI", sans-serif;
             text-align: center;
         }
@@ -103,6 +104,19 @@
         .download-button:hover {
             background-color: #0056b3;
         }
+
+        /* Additional text styling */
+        .footer-text {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+        .footer-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -148,6 +162,12 @@
 
     <!-- APK Download Link -->
     <a href="https://drive.google.com/file/d/1-15vhan-hMUYhmCp12U0GS3UMPk_EAbX/view?usp=sharing" target="_blank" class="download-button">Download Android App</a>
+
+    <!-- Additional Text -->
+    <div class="footer-text">
+        Also available on<br>
+        <a href="ftp://10.3.0.31/Bhavnagar/SE/BVNC Gforms.html" class="footer-link">ftp://10.3.0.31/Bhavnagar/SE/BVNC Gforms.html</a>
+    </div>
 
 </body>
 </html>
