@@ -29,7 +29,7 @@
 
         /* Logo styling */
         .logo {
-            max-width: 160px;
+            max-width: 150px;
             margin-bottom: 20px;
         }
 
@@ -63,13 +63,19 @@
         }
         .column-header-orange {
             color: #ff7f0e;
-            margin-top: 30px; /* Added space above the Tasks heading */
-            margin-bottom: 10px; /* Reduced spacing below the Tasks heading */
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .column-header-blue {
+            color: #007bff;
+            margin-top: 30px;
+            margin-bottom: 10px;
             text-align: center;
         }
 
         /* Button styling */
-        .button-purple, .button-green, .button-orange {
+        .button-purple, .button-green, .button-orange, .button-blue {
             padding: 15px;
             font-size: 18px;
             color: white;
@@ -97,13 +103,19 @@
         .button-orange:hover {
             background-color: #cc6600;
         }
+        .button-blue {
+            background-color: #007bff;
+        }
+        .button-blue:hover {
+            background-color: #0056b3;
+        }
 
-        /* Download button styling */
+        /* Unique Download button styling */
         .download-button {
-            margin-top: 40px; /* Increased spacing above Download Android App button */
+            margin-top: 40px;
             padding: 15px;
             font-size: 20px;
-            background-color: #007bff;
+            background-color: #8B0000; /* Dark red for unique styling */
             color: white;
             border: none;
             cursor: pointer;
@@ -114,7 +126,7 @@
             display: inline-block;
         }
         .download-button:hover {
-            background-color: #0056b3;
+            background-color: #5A0000; /* Darker red on hover */
         }
 
         /* Additional text styling */
@@ -179,10 +191,17 @@
     </div>
 
     <!-- Tasks Section -->
-    <div class="column-header column-header-orange">Tasks (Desktop)</div>
+    <div class="column-header column-header-orange">Tasks</div>
     <div class="tasks-container">
         <button class="button-orange" onclick="window.open('https://docs.google.com/spreadsheets/d/1JX_jgXXaWNhPoedL3lXJsUxUMKDxerC0ru6DZA3oMIc/edit?gid=0#gid=0&fvid=952967006', '_blank')">Tasks - Division</button>
         <button class="button-orange" onclick="window.open('https://docs.google.com/spreadsheets/d/1JX_jgXXaWNhPoedL3lXJsUxUMKDxerC0ru6DZA3oMIc/edit?gid=0#gid=0&fvid=2110090991', '_blank')">Tasks - Dept.</button>
+    </div>
+
+    <!-- Information Section -->
+    <div class="column-header column-header-blue">Information</div>
+    <div class="tasks-container">
+        <button class="button-blue" onclick="window.open('https://forms.gle/4nBvHL1AkboctgqdA', '_blank')">Theft Information</button>
+        <button class="button-blue" onclick="window.open('https://forms.gle/JtP6rhwst9MrK2A3A', '_blank')">New Ideas</button>
     </div>
 
     <!-- APK Download Link -->
