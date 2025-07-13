@@ -1,135 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BVNC Gforms</title>
-    <style>
-        @font-face {
-            font-family: 'Aptos';
-            src: url('path/to/aptos-regular.woff2') format('woff2'),
-                 url('path/to/aptos-regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BVNC Gforms</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      padding: 40px 0;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            padding: 40px 0;
-            font-family: "Aptos", "Segoe UI", sans-serif;
-            text-align: center;
-        }
+    .logo {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
 
-        .logo {
-            max-width: 150px;
-            margin-bottom: 20px;
-        }
+    .heading {
+      font-size: 28px;
+      font-weight: bold;
+      color: #d1136a;
+      margin-bottom: 10px;
+    }
 
-        .heading {
-            font-size: 28px;
-            font-weight: bold;
-            color: #d1136a;
-            margin-bottom: 20px;
-        }
+    .reports-button {
+      background: linear-gradient(135deg, #f7971e, #ffd200);
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      padding: 14px 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin: 20px 0;
+      transition: transform 0.2s ease;
+      width: 30%; display: inline-block;
+      max-width: 420px;
+    }
 
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            max-width: 600px;
-        }
+    .reports-button:hover {
+      transform: scale(1.05);
+    }
 
-        .column-header {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 600px;
+    }
 
-        .column-header-purple { color: #6a0dad; }
-        .column-header-green { color: #28a745; }
-        .column-header-orange {
-            color: #ff7f0e;
-            margin-top: 30px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .column-header-blue {
-            color: #007bff;
-            margin-top: 30px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
+    .column-header {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-        .button-purple, .button-green, .button-orange, .button-blue {
-            padding: 15px;
-            font-size: 18px;
-            color: white;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
+    .column-header-purple { color: #6a0dad; }
+    .column-header-green { color: #28a745; }
+    .column-header-orange {
+      color: #ff7f0e;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .column-header-blue {
+      color: #007bff;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
 
-        .button-purple { background-color: #6a0dad; }
-        .button-purple:hover { background-color: #4b0082; }
-        .button-green { background-color: #28a745; }
-        .button-green:hover { background-color: #218838; }
-        .button-orange { background-color: #ff7f0e; }
-        .button-orange:hover { background-color: #cc6600; }
-        .button-blue { background-color: #007bff; }
-        .button-blue:hover { background-color: #0056b3; }
+    .button-purple, .button-green, .button-orange, .button-blue {
+      padding: 15px;
+      font-size: 18px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
 
-        .download-button {
-            margin-top: 40px;
-            padding: 15px;
-            font-size: 20px;
-            background-color: #8B0000;
-            color: white;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .download-button:hover { background-color: #5A0000; }
+    .button-purple { background-color: #6a0dad; }
+    .button-purple:hover { background-color: #4b0082; }
+    .button-green { background-color: #28a745; }
+    .button-green:hover { background-color: #218838; }
+    .button-orange { background-color: #ff7f0e; }
+    .button-orange:hover { background-color: #cc6600; }
+    .button-blue { background-color: #007bff; }
+    .button-blue:hover { background-color: #0056b3; }
 
-        .footer-text {
-            margin-top: 30px;
-            font-size: 18px;
-        }
+    .download-button {
+      margin-top: 40px;
+      padding: 15px;
+      font-size: 20px;
+      background-color: #8B0000;
+      color: white;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .download-button:hover { background-color: #5A0000; }
 
-        .footer-link {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .footer-link:hover {
-            text-decoration: underline;
-        }
+    .footer-text {
+      margin-top: 30px;
+      font-size: 18px;
+    }
 
-        .tasks-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            max-width: 600px;
-        }
-    </style>
+    .footer-link {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+
+    .tasks-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 600px;
+    }
+
+    @media (max-width: 600px) {
+      .container, .tasks-container {
+        grid-template-columns: 1fr;
+      }
+      .button-purple, .button-green, .button-orange, .button-blue {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <img src="https://discom.geourja.com/images/pg.png" alt="PGVCL Logo" class="logo">
-    <div class="heading">Bhavnagar Circle</div>
+  <img src="https://discom.geourja.com/images/pg.png" alt="PGVCL Logo" class="logo">
+  <div class="heading">Bhavnagar Circle</div>
 
-    <div class="container">
-        <div class="column-header column-header-purple">Forms</div>
-        <div class="column-header column-header-green">Responses</div>
+  <!-- 🆕 Reports Button -->
+  <button class="reports-button" onclick="window.open('https://sites.google.com/view/pgvclbvnc/reports', '_blank')">
+    📊 Reports
+  </button>
+
+  <!-- Continue with your existing layout -->
+  <div class="container">
+    <div class="column-header column-header-purple">Forms</div>
+    <div class="column-header column-header-green">Responses</div>
 
         <button class="button-purple" onclick="window.open('https://forms.gle/7LmnU2Pwzs67qVi6A', '_blank')">Morning Talk</button>
         <button class="button-green" onclick="window.open('https://docs.google.com/spreadsheets/d/1HS7MreQb4NWPPwr1jurDhB61bHyR3eO20FrJ2IKOmxE/edit?usp=sharing', '_blank')">Work Planning</button>
@@ -184,7 +213,7 @@
 
         <button class="button-purple" onclick="window.open('https://forms.gle/RUvcNdQQqMudy4D49', '_blank')">Vehicle Indent</button>
         <button class="button-green" onclick="window.open('https://docs.google.com/spreadsheets/d/1CGAqvWJhw1VRhm02lXLyCbmbj7iJCBEV5n4RMZAbeRI/edit?usp=sharing', '_blank')">Allotment</button>
-    </div>
+  </div>
 
     <div class="column-header column-header-orange">Tasks</div>
     <div class="tasks-container">
